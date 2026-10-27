@@ -1,20 +1,22 @@
 # F.R.I.D.A.Y. PC Backend
 
 ## Verified
-- Local Python API starts on 127.0.0.1:8000.
-- `/api/health` reports backend status.
-- `POST /api/chat` calls the Meterless H-MEM notebook.
-- A live request returned H-MEM retrieval output with memory provenance.
+- Python API starts locally on 127.0.0.1:8000.
+- `/api/health` reports backend and Meterless configuration.
+- `POST /api/chat` successfully invoked the Meterless agent.
+- The running API returned `mode: model` through NVIDIA Nemotron.
+- H-MEM memory `mem-1` was retrieved and included in a generated answer.
+- A separate Nemotron API smoke test returned `FRIDAY_BRAIN_OK`.
+- A separate Zetaris smoke test returned `seven: 7`; its result was stored and recalled through H-MEM.
 
 ## Limitations
-- This is a PC-side prototype, not the recovered original Android backend.
-- Chat was verified in retrieval-only mode.
-- Nemotron was tested separately, but the running API has not yet been
-  verified with Nemotron enabled.
-- The Zetaris bridge is a separate component and must be running locally.
+- The NVIDIA key was supplied to the running process at launch and is not stored in source control.
+- The Zetaris bridge was not reachable in the latest PC backend health check.
+- Browser UI-to-backend operation has not yet been independently verified.
+- This is a PC prototype, not the original Android application.
+- Full Android-to-Zetaris integration remains unverified.
 
 ## Run
-Load Node.js 22 using nvm, then set `FRIDAY_METERLESS_DIR` to the prepared
-Meterless directory and run `python3 app.py`.
+Use Node.js 22, set `FRIDAY_METERLESS_DIR` to the prepared Meterless agent directory, configure `NVIDIA_API_KEY` securely in the process environment, and run `python3 app.py`.
 
 The API binds to localhost only.

@@ -137,7 +137,7 @@ Nairobi, Kenya
 A standalone Meterless H-MEM starter has been tested for memory mining,
 retrieval with provenance, and recall across separate command runs.
 See `docs/METERLESS_HMEM_TEST.md` for the recorded test and setup steps.
-This is not yet connected to the main F.R.I.D.A.Y. backend. A live Nemotron response was observed through the H-MEM adapter, but the command exited with status 1; full application integration remains unverified.
+The Meterless agent and PC API have now returned a live Nemotron-generated answer using H-MEM context, with memory provenance. Browser UI operation and full Android integration remain unverified.
 
 ## Zetaris + Meterless workflow
 
