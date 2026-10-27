@@ -1,22 +1,20 @@
-# F.R.I.D.A.Y. PC Backend Status
+# F.R.I.D.A.Y. PC Backend
 
 ## Verified
-- A local Python API runs on 127.0.0.1:8000.
-- GET /api/health reports backend and component status.
-- POST /api/chat invokes the Meterless H-MEM notebook.
-- The desktop UI on port 8780 has successfully received an H-MEM response
-  through this API.
+- Local Python API starts on 127.0.0.1:8000.
+- `/api/health` reports backend status.
+- `POST /api/chat` calls the Meterless H-MEM notebook.
+- A live request returned H-MEM retrieval output with memory provenance.
 
 ## Limitations
-- This is a new PC-side prototype, not the recovered original Android backend.
-- Chat currently uses H-MEM retrieval; live Nemotron through this API
-  has not yet been verified.
-- Zetaris has a separate tested integration workflow, but the PC API
-  health check did not report the bridge as reachable at the last check.
-- The desktop UI's initial welcome message is static.
+- This is a PC-side prototype, not the recovered original Android backend.
+- Chat was verified in retrieval-only mode.
+- Nemotron was tested separately, but the running API has not yet been
+  verified with Nemotron enabled.
+- The Zetaris bridge is a separate component and must be running locally.
 
-## Run locally
-Load Node.js 22 with nvm, then run:
-FRIDAY_METERLESS_DIR="$HOME/friday-meterless-test" python3 app.py
+## Run
+Load Node.js 22 using nvm, then set `FRIDAY_METERLESS_DIR` to the prepared
+Meterless directory and run `python3 app.py`.
 
-The API binds to localhost only. Do not expose it publicly.
+The API binds to localhost only.
