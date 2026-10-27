@@ -27,5 +27,5 @@ Requirements: Python 3, Node.js 20+, npm, the Zetaris platform, and a locally co
 ## Scope and limitations
 This verifies a combined integration demo, not integration into the missing
 main F.R.I.D.A.Y. `app.py`. The query is fixed and does not accept arbitrary
-SQL from the client. NVIDIA Nemotron has not been verified in this workflow.
+SQL from the client. A live Nemotron response was observed separately through the H-MEM adapter; the command exited with status 1, and integration into the main F.R.I.D.A.Y. backend remains unverified.
 Keep credentials local and do not expose the bridge publicly.

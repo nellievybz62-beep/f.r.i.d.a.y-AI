@@ -1,18 +1,21 @@
-# NVIDIA Nemotron Integration Status
+# NVIDIA Nemotron Verification
 
-## Implemented in source
-The Meterless H-MEM model adapter now includes an NVIDIA-compatible
-chat-completions API path, configurable using NVIDIA_API_KEY and
-NVIDIA_MODEL. The offline retrieval-only fallback remains available.
+## Observed result
+- Model configured: `nvidia/nemotron-3.5-super-vl-120b-a12b`.
+- The Meterless H-MEM agent printed `mode: nvidia-nemotron`.
+- A live response answered the question about F.R.I.D.A.Y.'s security philosophy.
+- The answer cited the stored memory `mem-6`, demonstrating use of retrieved memory context.
 
-## Verified
-The offline H-MEM retrieval fallback was tested successfully.
-The standalone H-MEM memory and retrieval workflow was also tested.
+## Remaining caveat
+The terminal reported exit code 1 after printing the response. The live
+response was produced, but the command's final exit status needs investigation.
 
-## Not yet verified
-A successful live NVIDIA Nemotron API response has not been captured.
-Do not describe the Nemotron connection as a verified, working integration
-until a real model request succeeds.
+## Scope
+The test was run in the local H-MEM test copy using the NVIDIA adapter source
+copied from the submission project. This verifies the adapter's live response
+path, but does not establish that the missing main F.R.I.D.A.Y. `app.py`
+uses Nemotron.
 
 ## Security
-Never commit API keys, credentials, or local .env files.
+API credentials are supplied locally. Never commit `.env` files, API keys,
+or access tokens.
