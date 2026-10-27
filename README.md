@@ -94,7 +94,15 @@ Project FRIDAY combines AI and wearable technology to provide:
 
 ## Current Status
 
-🚧 Project FRIDAY is currently in the MVP planning and architecture design stage.
+🚧 Project FRIDAY is an evolving prototype, with core assistant development and sponsor integration testing underway.
+
+### Verified Progress
+- A local Zetaris bridge successfully executed a test query and returned `seven: 7`.
+- The bridge requires authentication for query requests.
+- Android connectivity to the bridge health endpoint has been tested.
+- Full authenticated Android-to-Zetaris integration remains in progress.
+
+Some listed technologies and accessibility features represent planned architecture, not yet completed capabilities.
 
 We are actively seeking collaborators, mentors, accessibility experts, AI engineers, hardware engineers, designers, researchers, and strategic partners.
 
