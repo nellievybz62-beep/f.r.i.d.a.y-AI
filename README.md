@@ -131,3 +131,11 @@ Nairobi, Kenya
 ---
 
 *"Technology should not only be intelligent—it should be empowering."*
+
+## Meterless H-MEM status
+
+A standalone Meterless H-MEM starter has been tested for memory mining,
+retrieval with provenance, and recall across separate command runs.
+See `docs/METERLESS_HMEM_TEST.md` for the recorded test and setup steps.
+This is not yet connected to the main F.R.I.D.A.Y. backend; do not
+interpret it as proof that the complete assistant uses Meterless or NVIDIA Nemotron.
