@@ -139,3 +139,11 @@ retrieval with provenance, and recall across separate command runs.
 See `docs/METERLESS_HMEM_TEST.md` for the recorded test and setup steps.
 This is not yet connected to the main F.R.I.D.A.Y. backend; do not
 interpret it as proof that the complete assistant uses Meterless or NVIDIA Nemotron.
+
+## Zetaris + Meterless workflow
+
+A combined smoke test has successfully queried Zetaris (`seven = 7`), stored
+the result in Meterless H-MEM, and recalled it with memory provenance.
+Reproduction steps and limitations are documented in
+`docs/ZETARIS_HMEM_WORKFLOW.md`. This is not yet the full F.R.I.D.A.Y.
+backend, and NVIDIA Nemotron is not yet verified.
